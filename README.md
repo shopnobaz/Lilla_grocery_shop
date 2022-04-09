@@ -1,1 +1,2 @@
-# Lilla_grocery_shop
+# webdriver-io-github-actions
+Run WebDriverIO tests using GitHub Actions
