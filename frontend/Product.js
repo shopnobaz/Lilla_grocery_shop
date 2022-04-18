@@ -17,6 +17,19 @@ class Product {
       throw (new Error('id must be a number'))
     }
 
+    if (typeof name !== 'string') {
+      throw (new Error('name  must be a string'))
+    }
+
+    if (typeof price !== 'number') {
+      throw (new Error('price must be a number'))
+    }
+
+
+    if (typeof description !== 'string') {
+      throw (new Error('description must be a string'))
+    }
+
     // transfer parameters to properties
     this.id = id;
     this.name = name;
