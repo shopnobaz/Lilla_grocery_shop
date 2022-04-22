@@ -3,8 +3,8 @@
 
 body {
   margin: 0;
-  background-color: rgb(135, 202, 168);
-  font-family: 'Bitter';
+  background-color: #FFFFFF;
+  font-family: 'serif';
 }
 
 h1,
@@ -13,23 +13,24 @@ h3,
 h4,
 button,
 .price {
-  font-family: 'Quicksand';
+  font-family: 'serif';
 }
 
 header {
-  background-color: rgb(73, 201, 73);
+  background-color: #B00020;
 }
 
 header h1 {
   margin: 0;
   padding: 20px;
-  font-family: 'Bubblegum Sans';
+  font-family: 'serif';
   font-weight: normal;
+  color: #FFFFFF;
 }
 
 main {
   background-color: white;
-  max-width: 600px;
+  max-width: 500px;
   margin: 20px auto;
   padding: 20px;
 }
@@ -37,8 +38,8 @@ main {
 .productInList {
   border-radius: 10px;
   margin-bottom: 20px;
-  padding: 10px 20px;
-  background-color: rgb(208, 236, 208);
+  padding: 50px 100px;
+  background-color: #E0E0E0;
 }
 
 .productInList h3 {
@@ -60,7 +61,7 @@ main {
   cursor: pointer;
   border-radius: 5px;
   padding: 10px 20px;
-  background-color: rgb(42, 135, 65);
+  background-color: #212121;
   color: white;
 }
 
@@ -71,6 +72,7 @@ main {
 
 .buyButton {
   cursor: pointer;
+  
 }
 
 .shoppingCart {
@@ -130,7 +132,7 @@ button {
   height: 60vh;
   left: 20vw;
   width: 60vw;
-  background-color: white;
+  background-color: #E0E0E0;
   padding: 20px;
   border-radius: 10px;
 }
