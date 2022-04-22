@@ -6,6 +6,35 @@ const pauseTime = 3000;
 // $ - grab an element
 // element: click, setValue
 
+Given('I am on the home page with product list', async () => {
+  await browser.url('/');
+  //await $('div#i101.productInList').click();
+});
+
+
+When(/^I click on the product title "(.*)"$/, async (text) => {
+  let singleProduct = await $('#i101 h3');
+  await singleProduct.click();
+});
+
+
+Then(/^I see page with product "(.*)" details$/, async (text) => {
+  // get all the table cells in the first row of the table
+  // that is the shoppingList/cart
+  await $('.backButton').waitForExist();
+  expect(await $('#i101')).toHaveTextContaining(text);
+  await browser.pause(pauseTime);
+});
+
+
+
+
+
+
+
+
+
+
 Given('that I can see the product list', async () => {
   await browser.url('/');
 });
@@ -45,3 +74,16 @@ Then(/^(\d*) item of "(.*)" should be added to the cart$/, async (quantity, prod
   // pause before ending the step
   await browser.pause(pauseTime);
 });
+
+
+
+/* Then(/^(\d*) item of "(.*)" should be shown details $/, async (productName) => {
+  // get all the table cells in the first row of the table
+  // that is the shoppingList/cart
+  // check that we have the expected content in the cart
+  await expect(tds[1]).toHaveText(productName);
+  // mostly for humans - scroll to the shopping cart
+  await tds[0].scrollIntoView();
+  // pause before ending the step
+  await browser.pause(pauseTime);
+}); */
