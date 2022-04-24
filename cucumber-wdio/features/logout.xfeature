@@ -1,0 +1,7 @@
+Feature: Logout
+    As a user I want to be able to Logout
+
+    Scenario: Clicking logout  button
+        Given that I am logged in and can see the logout button
+        When I click the logout button
+        Then I should be logged out

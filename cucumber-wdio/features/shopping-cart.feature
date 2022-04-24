@@ -5,5 +5,5 @@ Feature: Shopping-cart
 
   Scenario: Clicking a buy button
     Given that I can see the product list
-    When I click on the buy button for "Juice - Orange, Concentrate"
-    Then 1 item of "Juice - Orange, Concentrate" should be added to the cart
+    When I click on the buy button for "Oliv oil"
+    Then 1 item of "Oliv oil" should be added to the cart

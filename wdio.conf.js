@@ -87,11 +87,11 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: process.env.WDIO_LOG_LEVEL || 'info',
+    logLevel: process.env.WDIO_LOG_LEVEL || 'warn',
     //
     // Set specific log levels per logger
     // loggers:
-    // - webdriver, webdriverio
+    // - webdriver, webdriveriorn
     // - @wdio/browserstack-service, @wdio/devtools-service, @wdio/sauce-service
     // - @wdio/mocha-framework, @wdio/jasmine-framework
     // - @wdio/local-runner

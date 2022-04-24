@@ -1,5 +1,5 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
-const pauseTime = 0;
+const pauseTime = 3000;
 
 // browser.url - navigate to a page/url
 // browser.pause - pause execution for a number of ms
@@ -45,3 +45,16 @@ Then(/^(\d*) item of "(.*)" should be added to the cart$/, async (quantity, prod
   // pause before ending the step
   await browser.pause(pauseTime);
 });
+
+
+
+/* Then(/^(\d*) item of "(.*)" should be shown details $/, async (productName) => {
+  // get all the table cells in the first row of the table
+  // that is the shoppingList/cart
+  // check that we have the expected content in the cart
+  await expect(tds[1]).toHaveText(productName);
+  // mostly for humans - scroll to the shopping cart
+  await tds[0].scrollIntoView();
+  // pause before ending the step
+  await browser.pause(pauseTime);
+}); */
