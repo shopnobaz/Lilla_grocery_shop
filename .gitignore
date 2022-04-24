@@ -1,3 +1,6 @@
+# Database changes
+./Database/products.db
+
 # Logs
 logs
 *.log
