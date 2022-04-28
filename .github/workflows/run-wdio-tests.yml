@@ -1,39 +1,26 @@
-name: Run feature test
+name: Node.js CI
 
-# Run this workflow when we dev or main changes
-# because of a push or is about the be changed
-# by a pull request
 on:
   push:
-    branches: [test, dev]
-  pull_request: 
-    branches: [test, dev]
+    branches: [ dev]
 
 jobs:
-  
-  ### Run feature test
-  webdriver-io-tests:
+  build:
 
-    runs-on: ubuntu-latest # on an ubuntu server
+    runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        node-version: [14.x] # with Node.js 14.x
-  
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
-      # checkout repo
-    - uses: actions/checkout@v2 
-      # install node
+    - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-      # install npm modules (using ci, instead of i)
     - run: npm ci
-      # run the npm build command (not used in our project)
     - run: npm run build --if-present
-     
-      # run our Node.js based server/backend/REST-api using npm
-    - run: npm index.js
-     
-     
+    - run: npm start
