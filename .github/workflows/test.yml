@@ -39,4 +39,4 @@ jobs:
     - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - run: sudo apt install ./google-chrome-stable_current_amd64.deb
       # run the unit tests
-    - run: npm  test
+    - run: npm  test         
