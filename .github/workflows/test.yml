@@ -1,0 +1,95 @@
+name: unit-test
+# Run this workflow when we dev or main changes
+# because of a push or is about the be changed
+# by a pull request
+
+on:
+  push:
+    branches: [test]
+  pull_request: 
+    branches: [test]
+
+jobs:
+  test:
+
+ runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+ 
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+      # build our react project to the dist folder
+    - run: npm run build
+      # install pm2 so we can run our node.js
+      # based backend without blocking the terminal
+    - run: npm install -g pm2
+      # copy db-template to real db
+    - run: cp backend/database/bookshop-template.db backend/database/bookshop.db
+      # start up our backend because the methods
+      # we are unit testing calls the backend
+    - run: pm2 start backend/index.js
+      # run the unit tests
+    - run: npm run test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
