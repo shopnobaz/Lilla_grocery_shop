@@ -33,9 +33,8 @@ jobs:
       # run the npm build command (not used in our project)
     - run: npm run build --if-present
       # install pm2
-    - run: npm install -g pm2
       # run our Node.js based server/backend/REST-api using pm2
-    - run: pm2 start index.js
+    - run: npm start
       # Install Chrome
     - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - run: sudo apt install ./google-chrome-stable_current_amd64.deb
