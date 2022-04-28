@@ -1,4 +1,4 @@
-
+name: Run Unit  tests
 # Run this workflow when we dev or main changes
 # because of a push or is about the be changed
 # by a pull request
@@ -10,6 +10,7 @@ on:
     branches: [test]
 
 jobs:
+### Run Unit  tests
   test:
 
     runs-on: ubuntu-latest
@@ -26,15 +27,16 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-      # build our react project to the dist folder
-    - run: npm run build
+      # run the npm build command (not used in our project)
+    - run: npm run build --if-present
       # install pm2 so we can run our node.js
       # based backend without blocking the terminal
     - run: npm install -g pm2
-      # copy db-template to real db
-    - run: cp backend/database/bookshop-template.db backend/database/bookshop.db
-      # start up our backend because the methods
-      # we are unit testing calls the backend
+
+      # run our Node.js based server/backend/REST-api using pm2
     - run: pm2 start backend/index.js
+      # Install Chrome
+    - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - run: sudo apt install ./google-chrome-stable_current_amd64.deb
       # run the unit tests
-    - run: npm run test
+    - run: npm  test
