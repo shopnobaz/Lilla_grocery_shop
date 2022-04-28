@@ -1,4 +1,4 @@
-name: unit-test
+
 # Run this workflow when we dev or main changes
 # because of a push or is about the be changed
 # by a pull request
