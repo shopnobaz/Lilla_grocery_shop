@@ -4,15 +4,19 @@
     "description": "",
     "main": "main.js",
     "scripts": {
+
         "start": "node backend/index"       
-    },
+
+        },
 
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
         
+
          "jsdom": "^19.0.0"
+
         
     },
     "dependencies": {

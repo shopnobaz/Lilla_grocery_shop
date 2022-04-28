@@ -1,5 +1,8 @@
+
 # ignore my database
 database/products.db
+
+
 
 # Logs
 logs
