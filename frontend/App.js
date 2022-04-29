@@ -71,10 +71,6 @@ class App {
 
     LoginAndRegister.addEvents();
 
-    listen('click', '.checkout', () => {
-      this.productList.shoppingCart.checkout();
-    });
-
   }
 
 }
