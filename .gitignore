@@ -1,8 +1,5 @@
-
-# ignore my database
-database/products.db
-
-
+#ignore database change
+/database/products.db
 
 # Logs
 logs
