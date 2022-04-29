@@ -34,6 +34,8 @@ jobs:
     - run: npm run build --if-present
       # install pm2
     - run: npm install -g pm2
+      # copy db template to new db
+    - run: cp database/products-template.db database/products.db
       # run our Node.js based server/backend/REST-api using pm2
     - run: pm2 start backend/index.js
       # Install Chrome
