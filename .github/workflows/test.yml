@@ -31,7 +31,8 @@ jobs:
       # install pm2 so we can run our node.js
       # based backend without blocking the terminal
       # run our Node.js based server/backend/REST-api using pm2
-    - run: npm start 
+    - run: npm install -g pm2
+    - run: pm2 start backend/index.js
       # Install Chrome
     - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - run: sudo apt install ./google-chrome-stable_current_amd64.deb
