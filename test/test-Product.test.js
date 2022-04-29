@@ -74,26 +74,6 @@ describe('Test the Product class', () => {
     }).toThrow();
 
   })
-
-
-  /*   test('should output id, image and name,price', () => {
-      //renderInList(myProduct); should output data less test 
-  
-      const testproduct = renderInList(104, "https://www.halegroves.com/images/xl/buy-navel-oranges-online-123020.jpg", 'Clementiner Klass 1', 32);
-      expect(testproduct).toBe(104, "https://www.halegroves.com/images/xl/buy-navel-oranges-online-123020.jpg", 'Clementiner Klass 1', 32);
-  
-    });
-  
-  
-    test('renderInList method should output data less text', () => {
-      //renderInList(Product); should output data less test 
-  
-      let testproduct = renderInList(null, '', '', null);
-      expect(testproduct).toBe(null, '', '', null);
-  
-    }); */
-
-
 });
 
 

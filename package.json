@@ -4,20 +4,15 @@
     "description": "",
     "main": "main.js",
     "scripts": {
-
-        "start": "node backend/index"       
-
-        },
-
+        "start": "node backend/index",
+        "test": "jest"
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        
-
-         "jsdom": "^19.0.0"
-
-        
+        "jest": "^27.5.1",
+        "jsdom": "^19.0.0"
     },
     "dependencies": {
         "better-express-store": "^1.0.4",
