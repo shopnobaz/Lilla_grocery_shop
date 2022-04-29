@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  background-color: rgb(42, 135, 65);
+  background-color: rgb(135, 202, 168);
   font-family: 'Bitter';
 }
 
@@ -147,8 +147,4 @@ button {
 
 .logout {
   display: none;
-}
-
-.checkout {
-  float: right;
 }
