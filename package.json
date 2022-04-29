@@ -4,20 +4,14 @@
     "description": "",
     "main": "main.js",
     "scripts": {
-
-        "start": "node backend/index"       
-
-        },
-
+        "start": "node backend/index",
+        "api-tests": "newman run test-rest-api/test.postman_collection.json"
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        
-
-         "jsdom": "^19.0.0"
-
-        
+        "jsdom": "^19.0.0"
     },
     "dependencies": {
         "better-express-store": "^1.0.4",
