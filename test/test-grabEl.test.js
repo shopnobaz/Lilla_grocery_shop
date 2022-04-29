@@ -2,6 +2,12 @@ require('./fakeDOM.js');
 
 const { grabEl, grabEls } = require('../frontend/helpers');
 
+// Note replaceAll not working in Node 14 - a fairly new String method in JS
+// mock it if it does not exist
+String.prototype.replaceAll = String.prototype.replaceAll || function(x,y){
+  return this.split(x).join(y);
+}
+
 describe('Test grabEl', () => {
 
   test('grabEL function exists', () => {
