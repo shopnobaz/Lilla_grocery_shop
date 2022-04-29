@@ -30,6 +30,6 @@ jobs:
       # based backend without blocking the terminal
     - run: npm install -g pm2
       # start up our backend
-    - run: pm2 start
+    - run: pm2 start backend/index.js
       # run our api tests
     - run: newman run test-rest-api/test.postman_collection.json
