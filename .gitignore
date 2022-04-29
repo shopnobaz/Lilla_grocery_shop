@@ -1,5 +1,5 @@
 #ignore database change
-./database/products.db
+/database/products.db
 
 # Logs
 logs
