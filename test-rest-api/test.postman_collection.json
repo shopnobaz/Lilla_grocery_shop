@@ -742,43 +742,6 @@
 			"response": []
 		},
 		{
-			"name": "Admin to get orders",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Body matches string\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(\"time\");\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Check if the id are same\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData[0].id).to.eql(1);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Check if the user id are same\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData[0].userId).to.eql(1);\r",
-							"});\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "http://localhost:3000/api/orders"
-			},
-			"response": []
-		},
-		{
 			"name": "Admin to delete user",
 			"event": [
 				{
