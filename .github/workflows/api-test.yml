@@ -26,6 +26,8 @@ jobs:
       # install newman globally so we can run
       # postman collections
     - run: npm install -g newman
+      # copy the db template to a new db file
+    - run: cp database/products-template.db products.db
       # install pm2 so we can run our node.js
       # based backend without blocking the terminal
     - run: npm install -g pm2
