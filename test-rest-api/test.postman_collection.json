@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "a0a2f010-4948-43e8-a43f-edf9dd3526a0",
 		"name": "Grocery-shop-collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -33,18 +33,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/products",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"products"
-					]
-				}
+				"url": "http://localhost:3000/api/products"
 			},
 			"response": []
 		},
@@ -75,18 +64,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"login"
-					]
-				}
+				"url": "http://localhost:3000/api/login"
 			},
 			"response": []
 		},
@@ -146,18 +124,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/api/users",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"users"
-					]
-				}
+				"url": "http://localhost:3000/api/users"
 			},
 			"response": []
 		},
@@ -201,18 +168,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/api/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"login"
-					]
-				}
+				"url": "http://localhost:3000/api/login"
 			},
 			"response": []
 		},
@@ -249,19 +205,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/api/users/{{currentUserId}}",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"users",
-						"{{currentUserId}}"
-					]
-				}
+				"url": "http://localhost:3000/api/users/{{currentUserId}}"
 			},
 			"response": []
 		},
@@ -289,18 +233,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"login"
-					]
-				}
+				"url": "http://localhost:3000/api/login"
 			},
 			"response": []
 		},
@@ -337,18 +270,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/api/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"login"
-					]
-				}
+				"url": "http://localhost:3000/api/login"
 			},
 			"response": []
 		},
@@ -376,18 +298,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/tablesAndViews",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"tablesAndViews"
-					]
-				}
+				"url": "http://localhost:3000/api/tablesAndViews"
 			},
 			"response": []
 		},
@@ -418,18 +329,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/users",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"users"
-					]
-				}
+				"url": "http://localhost:3000/api/users"
 			},
 			"response": []
 		},
@@ -556,18 +456,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/api/products",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"products"
-					]
-				}
+				"url": "http://localhost:3000/api/products"
 			},
 			"response": []
 		},
@@ -632,19 +521,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/products/{{id}}",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"products",
-						"{{id}}"
-					]
-				}
+				"url": "http://localhost:3000/api/products/{{id}}"
 			},
 			"response": []
 		},
@@ -728,19 +605,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/api/products/{{id}}",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"products",
-						"{{id}}"
-					]
-				}
+				"url": "http://localhost:3000/api/products/{{id}}"
 			},
 			"response": []
 		},
@@ -805,19 +670,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/products/{{id}}",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"products",
-						"{{id}}"
-					]
-				}
+				"url": "http://localhost:3000/api/products/{{id}}"
 			},
 			"response": []
 		},
@@ -884,19 +737,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/products/{{id}}",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"products",
-						"{{id}}"
-					]
-				}
+				"url": "http://localhost:3000/api/products/{{id}}"
 			},
 			"response": []
 		},
@@ -933,18 +774,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/orders",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"orders"
-					]
-				}
+				"url": "http://localhost:3000/api/orders"
 			},
 			"response": []
 		},
@@ -981,19 +811,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/users/{{currentUserId}}",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"users",
-						"{{currentUserId}}"
-					]
-				}
+				"url": "http://localhost:3000/api/users/{{currentUserId}}"
 			},
 			"response": []
 		},
@@ -1030,18 +848,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:3000/api/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"login"
-					]
-				}
+				"url": "http://localhost:3000/api/login"
 			},
 			"response": []
 		}
