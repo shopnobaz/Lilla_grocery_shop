@@ -58,8 +58,33 @@ class ShoppingCart {
       <td colspan="3">Total:</td>
       <td>${this.formatSEK(totalSum)}</td>
     </tr>`;
-    html += '</table><button class="closeCart">X</button></div>';
+    html += '</table><button class="closeCart">X</button>';
+    html += '<button class="checkout">Checkout</button></div>'
     return html;
+  }
+
+  async checkout() {
+
+    let reqBody = [];
+    for (let orderRow of this.orderRows) {
+      reqBody.push({
+        quantity: orderRow.quantity,
+        productId: orderRow.product.id
+      });
+    }
+
+    // Place the order by call /api/place-my-order
+    await (await fetch('/api/place-my-order', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(reqBody)
+    })).json();
+
+    // Empty the cart
+    this.orderRows = [];
+    document.querySelector('footer').innerHTML =
+      this.render();
+    alert('Thank you for your order!');
   }
 
 }
