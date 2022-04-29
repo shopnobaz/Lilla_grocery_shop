@@ -5,9 +5,7 @@
         "main": "main.js",
         "scripts": {
                 "start": "node backend/index",
-                "test": "jest",
-                "wdio": "wdio run wdio.conf.js",
-                "api-tests": "newman run test-rest-api/test.postman_collection.json"
+                "wdio": "wdio run wdio.conf.js"
         },
         "keywords": [],
         "author": "",
@@ -19,7 +17,6 @@
                 "@wdio/spec-reporter": "^7.19.1",
                 "chromedriver": "^100.0.0",
                 "dotenv": "^16.0.0",
-                "jest": "^27.5.1",
                 "wdio-chromedriver-service": "^7.3.2",
                 "jsdom": "^19.0.0"
         },

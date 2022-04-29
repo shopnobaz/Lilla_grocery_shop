@@ -8,5 +8,5 @@ Feature: Logout
         When I fill in the form with "adam@gmail.com" and "12345678"
         When I click the login button in the form
         And I should be logged in and see logout button
-        Then  I click the logout button
+        Then I click the logout button
         And I should be logged out and should see the login button
