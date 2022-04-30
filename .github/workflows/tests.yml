@@ -34,7 +34,7 @@ jobs:
       # start up our backend
     - run: pm2 start backend/index.js
       # run our api tests
-    - run: npm run test-rest-api
+    - run: npm run test-rest-api/test.postman_collection
 
   wdio-tests:
 
