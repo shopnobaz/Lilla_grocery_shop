@@ -12,3 +12,5 @@ toriqul
 
 hello from jahed
 check from all-3-tests
+
+checking from dev branch
