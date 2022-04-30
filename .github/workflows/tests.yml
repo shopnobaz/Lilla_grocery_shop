@@ -1,0 +1,133 @@
+name: api-test
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  api-tests:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+ 
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+      # install newman globally so we can run
+      # postman collections
+    - run: npm install -g newman
+      # copy the db template to a new db file
+    - run: cp database/products-template.db database/products.db
+      # install pm2 so we can run our node.js
+      # based backend without blocking the terminal
+    - run: npm install -g pm2
+      # start up our backend
+    - run: pm2 start backend/index.js
+      # run our api tests
+    - run: newman run test-rest-api/test.postman_collection.json
+
+  wdio-tests:
+
+    # Run this workflow when we dev or main changes
+# because of a push or is about the be changed
+# by a pull request
+on:
+  push:
+    branches: [dev, main]
+  pull_request: 
+    branches: [dev, main]
+
+jobs:
+  
+  ### Run api-tests with newman
+  webdriver-io-tests:
+
+    runs-on: ubuntu-latest # on an ubuntu server
+    strategy:
+      matrix:
+        node-version: [14.x] # with Node.js 14.x
+  
+    steps:
+      # install node
+    - uses: actions/checkout@v2 
+      # checkout repo
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+      # install npm modules (using ci, instead of i)
+    - run: npm ci
+      # run the npm build command (not used in our project)
+    - run: npm run build --if-present
+
+    # copy the db template to a new db file
+    - run: cp database/products-template.db database/products.db
+
+      # install pm2
+    - run: npm install -g pm2
+      # run our Node.js based server/backend/REST-api using pm2
+
+    - run: pm2 start backend/index.js
+
+    # Install Chrome
+    - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - run: sudo apt install ./google-chrome-stable_current_amd64.deb
+    ### Run the WebDriverIO tests
+    - run: HEADLESS_CHROME=yes npm run wdio
+
+  jest-tests:
+
+    # Run this workflow when we dev or main changes
+# because of a push or is about the be changed
+# by a pull request
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request: 
+    branches: [main, dev]
+
+jobs:
+### Run Unit  tests
+  jest-unit-tests:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+      # run the npm build command (not used in our project)
+    - run: npm run build --if-present
+      # install pm2 so we can run our node.js
+      # based backend without blocking the terminal
+      # run our Node.js based server/backend/REST-api using pm2
+
+      # copy the db template to a new db file
+    - run: cp database/products-template.db database/products.db
+    - run: npm install -g pm2
+    - run: pm2 start backend/index.js
+      # Install Chrome
+    - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - run: sudo apt install ./google-chrome-stable_current_amd64.deb
+    - run: npm install jest 
+      # run the unit tests
+    - run: npm test         
