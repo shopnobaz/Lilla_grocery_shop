@@ -62,7 +62,7 @@ jobs:
       # based backend without blocking the terminal
     - run: npm install -g pm2
       # copy db-template to real db
-    - run: cp database/products-template.db database/products.db
+      #run: cp database/products-template.db database/products.db
       # start up our backend
     - run: pm2 start backend/index.js
       # install Chrome (latest stable version)
