@@ -62,7 +62,7 @@ jobs:
       # based backend without blocking the terminal
     - run: npm install -g pm2
       # copy db-template to real db
-    - run: cp backend/database/bookshop-template.db backend/database/bookshop.db
+    - run: cp database/bookshop-template.db database/bookshop.db
       # start up our backend
     - run: pm2 start backend/index.js
       # install Chrome (latest stable version)
