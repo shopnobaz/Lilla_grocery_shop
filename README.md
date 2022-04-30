@@ -16,3 +16,4 @@ check from all-3-tests
 checking from dev branch
 
 checking form copy-of-dev branch
+checking form copy-of-dev branch again
