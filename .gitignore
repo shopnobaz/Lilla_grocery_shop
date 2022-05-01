@@ -1,6 +1,6 @@
 #ignore database change
 database/products.db
-
+*.vscode/settings.json
 # Logs
 logs
 *.log
