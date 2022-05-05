@@ -109,7 +109,7 @@ jobs:
     # only run this job if the environment protection rules
     # (a reviewers approves and we are on the dev branch)
     # are fulfilled
-    #environment: "Dev server"
+    environment: "Dev server"
 
     runs-on: ubuntu-latest
     
