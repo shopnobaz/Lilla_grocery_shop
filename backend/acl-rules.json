@@ -19,11 +19,6 @@
     "login": {
       "get": true,
       "delete": true
-    },
-    "users": {
-      "get": true,
-      "put": true,
-      "delete": true
     }
 
     
