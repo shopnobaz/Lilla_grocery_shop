@@ -20,10 +20,8 @@
       "get": true,
       "delete": true
     },
-    "users": {
-      "get": true,
-      "put": true,
-      "delete": true
+    "place-my-order": {
+      "post": true
     }
 
     
@@ -47,6 +45,27 @@
       "post": true,
       "put": true,
       "delete": true
+    },
+    "orders": {
+      "get": true,
+      "post": true,
+      "put": true,
+      "delete": true
+    },
+    "orderRows": {
+      "get": true,
+      "post": true,
+      "put": true,
+      "delete": true
+    },
+    "orderDetails": {
+      "get": true
+    },
+    "orderSums": {
+      "get": true
+    },
+    "orderDetailsWithSums": {
+      "get": true
     }
   }
 }
