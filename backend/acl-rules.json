@@ -19,6 +19,11 @@
     "login": {
       "get": true,
       "delete": true
+    },
+    "users": {
+      "get": true,
+      "put": true,
+      "delete": true
     }
 
     
@@ -38,6 +43,12 @@
       "delete": true
     },
     "users": {
+      "get": true,
+      "post": true,
+      "put": true,
+      "delete": true
+    },
+    "orders": {
       "get": true,
       "post": true,
       "put": true,
