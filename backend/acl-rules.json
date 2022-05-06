@@ -53,6 +53,21 @@
       "post": true,
       "put": true,
       "delete": true
+    },
+    "orderRows": {
+      "get": true,
+      "post": true,
+      "put": true,
+      "delete": true
+    },
+    "orderDetails": {
+      "get": true
+    },
+    "orderSums": {
+      "get": true
+    },
+    "orderDetailsWithSums": {
+      "get": true
     }
   }
 }
