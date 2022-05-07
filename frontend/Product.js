@@ -99,3 +99,4 @@ class Product {
 if (typeof module === 'object' && module.exports) {
   module.exports = Product;
 }
+
