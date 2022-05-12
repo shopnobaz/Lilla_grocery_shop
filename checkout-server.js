@@ -7,6 +7,16 @@ const {execSync} = require('child_process');
 
 const path = require('path');
 
+// Read the deployment key / secret from environment
+const secret = process.env.DEPLOYMENT_KEY;
+
+
+// If there is not secret - shut down
+if(!secret){
+  console.log('You need to provide the deployment key as an environment variable'); 
+  process.exit(1);
+}
+
 // Path to db-template
 const dbTemplatePath = path.join(__dirname, 'database', 'products-template.db');
 const dbPath = path.join(__dirname, 'database', 'products.db');
@@ -28,8 +38,7 @@ function checkout(){
 // the secret hash
 const server = http.createServer(function (req, res) {
   res.end('Ok');
-  if (req.url === '/d56e562c0606f3bbaf01dabffe8a0373410b77469763860fc1961fb64376889c'
-  ) {
+  if (req.url === '/' + secret) {
     checkout();
   }
 });
