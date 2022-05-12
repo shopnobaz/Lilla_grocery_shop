@@ -115,5 +115,5 @@ jobs:
     
     steps:
       ## call checkout server to checkout/pull our repo
-    - run: curl https://shopmain-checkout.sohan05.com/d56e562c0606f3bbaf01dabffe8a0373410b77469763860fc1961fb64376889c
+    - run: curl https://shopmain-checkout.sohan05.com/${{secrets.DEPLOYMENT_KEY}}
   
