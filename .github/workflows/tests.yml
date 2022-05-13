@@ -115,5 +115,6 @@ jobs:
     
     steps:
       ## call checkout server to checkout/pull our repo
-    - run: curl https://shopmain-checkout.sohan05.com/${{secrets.DEPLOYMENT_KEY}}
+    - run: export BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    - run: curl https://shop${BRANCH}-checkout.sohan05.com/${{secrets.DEPLOYMENT_KEY}}
   
