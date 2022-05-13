@@ -127,7 +127,7 @@ jobs:
     if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     steps:
-      run: curl https://shopdev-checkout.sohan05.com/${{secrets.DEPLOYMENT_KEY}}
+    - run: curl https://shopdev-checkout.sohan05.com/${{secrets.DEPLOYMENT_KEY}}
 
   golivemain:
 
@@ -135,4 +135,4 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      run: curl https://shopmain-checkout.sohan05.com/${{secrets.DEPLOYMENT_KEY}}
+    - run: curl https://shopmain-checkout.sohan05.com/${{secrets.DEPLOYMENT_KEY}}
