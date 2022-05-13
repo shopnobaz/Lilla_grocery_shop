@@ -21,9 +21,8 @@
       "delete": true
     },
     "users": {
-      "get": true,
-      "put": true,
-      "delete": true
+      "put": true
+      
     }
 
     

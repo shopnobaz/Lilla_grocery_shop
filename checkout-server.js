@@ -18,7 +18,6 @@ if(!port){
   process.exit(1);
 }
 
-
 // If there is not secret - shut down
 if(!secret){
   console.log('You need to provide the deployment key as an environment variable'); 
@@ -38,7 +37,7 @@ function checkout(){
     execSync('rm ' + dbPath); // remove the database
     execSync('cp ' + dbTemplatePath + ' ' + dbPath); // copy dbTemplate to db
     //execSync('npm run build'); // build the dist folder that will be served
-    execSync('pm2 restart dev-main'); // restart our main app
+    execSync('pm2 restart main-main'); // restart our main app
     console.log('Pulled, copied db and restarted the server');
 }
 
