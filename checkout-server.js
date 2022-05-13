@@ -7,9 +7,16 @@ const {execSync} = require('child_process');
 
 const path = require('path');
 
+const port = process.env.PORT // || 9876;
+
 // Read the deployment key / secret from environment
 const secret = process.env.DEPLOYMENT_KEY;
 
+// If there is no port shut down
+if(!port){
+  console.warn("No PORT environment variable provided!");
+  process.exit(1);
+}
 
 // If there is not secret - shut down
 if(!secret){
@@ -45,4 +52,4 @@ const server = http.createServer(function (req, res) {
 
 // Start up the server 
  
-server.listen(9876, () => console.log('Listening on http://localhost:9876'));
+server.listen(port, () => console.log('Listening on http://localhost:' + port));
