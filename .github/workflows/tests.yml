@@ -100,26 +100,7 @@ jobs:
       # run the unit tests
     - run: npm run test
   
-  #golive:
-
-    #env:
-     # ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-
-    # demand that the 3 test jobs succeed
-    # before running go live
-    #needs: [api-tests, wdio-tests, jest-tests]
-
-    # only run this job if the environment protection rules
-    # (a reviewers approves and we are on the dev branch)
-    # are fulfilled
-    #environment: "Dev server"
-
-    #runs-on: ubuntu-latest
-    
-    #steps:
-      ## call checkout server to checkout/pull our repo
-      #- uses: nelonoel/branch-name@v1
-      #- run: curl https://shop${BRANCH_NAME}-checkout.sohan05.com/${{secrets.DEPLOYMENT_KEY}}
+ 
 
   golivedev:
 
