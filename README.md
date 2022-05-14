@@ -2,7 +2,12 @@ Project overview
 
 Project name : Lilla grocery shop
 
-Contributor: 
+Contributors:
+toriqul007 (Toriqul Islam)
+solaiman2021 (Md Solaiman Islam)
+shopnobaz (Jahedur Rahman)
+nahidalamgh (Md Nahid Alam)
+
 
 
 We started with Discussing  the project and delegating our tasks. The goal is to create a webshop which has a  shopping cart and the ability to complete purchases and then empty the shopping cart. The way of our communication is mainly physical meeting and working together as well as following our Trello board to fulfill our sprint goals. 
